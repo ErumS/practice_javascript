@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MY SITE</title>
+  <link rel="stylesheet" type="text/css" href="CSS/contact.css">
+  <link rel="stylesheet" type="text/css" href="CSS/common.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtRgAO14FHU3Wn_NtKsWNp85jtjq8b-BA&callback=myMap"></script>
+  <script src="JS/contact.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="JS/common.js"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="row">
+      <div class="left-search">
+        <form class="form-inline">
+          <input class="form-control" type="text" size="10" placeholder="Search" aria-label="Search">
+          <button class="btn-search" type="submit">Search</button>
+        </form>
+      </div>
+      <div class="middle-name">
+        <h1>MyCompany</h1>
+      </div>
+      <div class="right-links">
+        <p class="social-icons">
+          <a href="http://www.facebook.com/PLACEHOLDER">
+            <img alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0>
+            <i class="icon-link"></i>
+          </a>
+          <a href="http://www.twitter.com/PLACEHOLDER">
+            <img alt="follow me on Twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter30x30.png" border=0>
+            <i class="icon-link"></i>
+          </a>
+          <a href="http://www.youtube.com/PLACEHOLDER">
+            <img alt="follow me on youtube" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" border=0>
+            <i class="icon-link"></i>
+          </a>
+          <a href="http://www.instagram.com/PLACEHOLDER">
+            <img alt="follow me on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" border=0>
+            <i class="icon-link"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="nav-bar">
+      <div class="container">
+        <ul class="nav-bar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" onmouseover="hoverNavFunc()"> Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" onmouseover="hoverNavFunc()"> About Us </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html" onmouseover="hoverNavFunc()"> Products </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="contact.html" onmouseover="hoverNavActiveFunc()"> Contact <span class="sr-only">(Current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="heading">
+      <h1>CONTACT US:</h1>
+    </div>
+    <div class="frame">
+      <div class="col-1">       
+        <h3>MyCompany</h3>
+        <form>
+          <label class="add-label-1">Address:</label>       
+          <label class="add-label-2">2/4, New Colony, Beach Vihar, India</label>
+        </form>
+        <form>
+          <label class="phn-label-1">Phone number:</label>
+          <label class="phn-label-2">+91 - 8874536282</label>
+        </form>
+        <form>
+          <label class="fax-label-1">Fax:</label>
+          <label class="fax-label-2">+1-212-9876543</label>
+        </form>
+        <form>
+          <h4><b>Subscribe to our newsletter</b></h4>
+          <label class="name">Your Name </label>
+          <input class="text-box-1" type="text" name="full_name" placeholder="Full Name"><br><br>
+          <label class="mail">Your Email ID </label>
+          <input class="mail-box-1" type="email" name="email_id" placeholder="Mail ID"><br><br>
+          <button class="subscribe-button" type="submit" name="submit">SUBSCRIBE</button>
+        </form>
+      </div>
+      <div class="col-2">
+        <div id="map" style="width:auto;height:400px;background:yellow"></div>
+          <script type="text/javascript">myMap()</script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-lists">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h3>Rails Column 1</h3>
+            <ul>
+              <li>Something one</li>
+              <li>Something two</li>
+              <li>Something three</li>
+              <li>Something four</li>
+              <li>Something five</li>
+              <li>Something six</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Rails Column 2</h3>
+            <ul>
+              <li>Something one</li>
+              <li>Something two</li>
+              <li>Something three</li>
+              <li>Something four</li>
+              <li>Something five</li>
+              <li>Something six</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Rails Column 3</h3>
+            <ul>
+              <li>Something one</li>
+              <li>Something two</li>
+              <li>Something three</li>
+              <li>Something four</li>
+              <li>Something five</li>
+              <li>Something six</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Rails column 4</h3>
+            <ul>
+              <li>Something one</li>
+              <li>Something two</li>
+              <li>Something three</li>
+              <li>Something four</li>
+              <li>Something five</li>
+              <li>Something six</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <h4>Copyright</h4>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+.heading {
+  color: maroon;
+  font-family: "Source Sans Pro", Arial, "sans-serif";
+  font-weight: bold;
+  text-decoration: underline;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .frame {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.frame .col-1 {
+  width: 60%;
+  margin-left: -1px;
+  margin-right: -1px;
+  float: left;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.frame .col-2 {
+  width: 40%;
+  float: right;
+  padding: 0.5rem;
+}
+
+.frame .col-1 .add-label-1, .phn-label-1, .fax-label-1 {
+  font-family: 'monospace', 'Times New Roman';
+  font-size: 20px;
+  color: gray;
+}
+
+.add-label-2, .phn-label-2, .fax-label-2 {
+  font-size: 15px;
+}
+
+.col-1 h3 {
+  color: #df1010;
+  font-size: 2rem;
+  line-height: 1.4rem;
+  letter-spacing: -0.2rem;
+  font-weight: 500;
+}
+
+.col-1 h4 {
+  color: #bbbddd;
+  font-size: 1.5rem;
+  line-height: 1.4rem;
+  font-weight: 300;
+}
+
+.col-1 .name, .mail {
+  font-family: "Source Sans Pro", Arial, "sans-serif";
+  font-size: 15px;
+}
+
+.col-1 .text-box-1, .mail-box-1 {
+  padding: 4px;
+}
+
+.col-1 button {
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: lightblue;
+  font-size: 12px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
