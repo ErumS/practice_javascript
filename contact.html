@@ -5,9 +5,10 @@
   <link rel="stylesheet" type="text/css" href="CSS/contact.css">
   <link rel="stylesheet" type="text/css" href="CSS/common.css">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtRgAO14FHU3Wn_NtKsWNp85jtjq8b-BA&callback=myMap"></script>
-  <script src="JS/contact.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="JS/common.js"></script>
+  <script src="JS/contact.js"></script>
+  <script src="JS/contact_next.js"></script>
 </head>
 <body>
   <div class="header">
@@ -81,14 +82,24 @@
           <label class="fax-label-1">Fax:</label>
           <label class="fax-label-2">+1-212-9876543</label>
         </form>
-        <form>
-          <h4><b>Subscribe to our newsletter</b></h4>
-          <label class="name">Your Name </label>
-          <input class="text-box-1" type="text" name="full_name" placeholder="Full Name"><br><br>
-          <label class="mail">Your Email ID </label>
-          <input class="mail-box-1" type="email" name="email_id" placeholder="Mail ID"><br><br>
-          <button class="subscribe-button" type="submit" name="submit">SUBSCRIBE</button>
-        </form>
+        <button class="subscribe-btn" id="clickOn" onmouseover="modalShow()">Subscribe Now!</button>
+        <div id="modalContainer" class="modal">
+          <div id="simpleModal" class="modal2">
+            <span class="close-btn" id="closeButton" onmouseover="modalHide()">&times;</span>
+            <form>
+              <h4><b>Subscribe to our newsletter</b></h4>
+              <label class="name">Your Name </label>
+              <input class="text-box-1" id="myName" type="text" name="full_name" placeholder="Full Name"><br><br>
+              <label class="mail">Your Email ID </label>
+              <input class="mail-box-1" id="myMail" type="email" name="email_id" placeholder="Mail ID"><br><br>
+              <button class="subscribe-button" type="submit" name="submit" onclick="displayInfo(full_name.value, email_id.value)">SUBSCRIBE</button>
+            </form>
+          </div>
+        </div>
+        <div id="newSec" class="newSection">
+          <div id="displayName"></div>
+          <div id="displayMail"></div>
+        </div>
       </div>
       <div class="col-2">
         <div id="map" style="width:auto;height:400px;background:yellow"></div>
