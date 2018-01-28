@@ -1,4 +1,8 @@
 $(function() {
+  $('#wrapper-about').hide();
+  $('#wrapper-products').hide();
+  $('#wrapper-contact').hide();
+  $('#newSec').hide();
   delay:17
   duration: 3000
   var ul = $(".slider ul");
@@ -68,4 +72,33 @@ function hoverPageFunc()
     }, function(){
     $(this).css("background-color", "white");
   });
+}
+
+//Web 3.0
+function index_home(){
+  $('#wrapper-about').css('display', 'none');
+  $('#wrapper-products').css('display', 'none');
+  $('#wrapper-contact').css('display', 'none');
+  $('#wrapper').css('display', 'block');
+}
+
+function index_about(){
+  $('#wrapper').css('display', 'none');
+  $('#wrapper-products').css('display', 'none');
+  $('#wrapper-contact').css('display', 'none');
+  $('#wrapper-about').css('display', 'block');
+}
+
+function index_products(){
+  $('#wrapper').css('display', 'none');
+  $('#wrapper-about').css('display', 'none');
+  $('#wrapper-contact').css('display', 'none');
+  $('#wrapper-products').css('display', 'block');
+}
+
+function index_contact(){
+  $('#wrapper').css('display', 'none');
+  $('#wrapper-products').css('display', 'none');
+  $('#wrapper-about').css('display', 'none');
+  $('#wrapper-contact').css('display', 'block');
 }

@@ -75,7 +75,7 @@
 }
 
 .subscribe-btn {
-  margin-top: 80px;
+  margin-top: 60px;
   padding: 30px;
   font-size: 1em;
   font-weight: 20px;
@@ -130,4 +130,12 @@
   box-sizing: border-box;
   display: block;
   cursor: pointer;
+}
+
+.newSection {
+  border-style: solid;
+  border-color: gray;
+  border-width: 2px;
+  padding: 10px;
+  margin-top: 20px;
 }

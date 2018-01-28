@@ -4,11 +4,18 @@
   <title>MY SITE</title>
   <link rel="stylesheet" type="text/css" href="CSS/index.css">
   <link rel="stylesheet" type="text/css" href="CSS/common.css">
+  <link rel="stylesheet" type="text/css" href="CSS/about.css">
+  <link rel="stylesheet" type="text/css" href="CSS/contact.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtRgAO14FHU3Wn_NtKsWNp85jtjq8b-BA&callback=myMap"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="JS/index.js"></script>
   <script type="text/javascript" src="JS/common.js"></script>
+  <script type="text/javascript" src="JS/about.js"></script>
+  <script src="JS/contact.js"></script>
+  <script src="JS/contact_next.js"></script>
 </head>
+
 <body>
   <div class="header">
     <div class="row">
@@ -44,105 +51,265 @@
     </div>
   </div>
 
-  <div class="content">
-    <div class="nav-bar">
-      <div class="container">
-        <ul class="nav-bar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html" onmouseover="hoverNavActiveFunc()"> Home <span class="sr-only">(Current)</span></a>
+  <div id="wrapper">
+    <div class="content">
+      <div class="nav-bar">
+        <div class="container">
+          <ul class="nav-bar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" onclick="index_home()" onmouseover="hoverNavActiveFunc()"> Home <span class="sr-only">(Current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="index_about()" onmouseover="hoverNavFunc()"> About Us </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="index_products()" onmouseover="hoverNavFunc()"> Products </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="index_contact()" onmouseover="hoverNavFunc()"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="slider">
+        <ul>
+          <li>
+            <img src="Pictures/thermometer.jpg" />
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html" onmouseover="hoverNavFunc()"> About Us </a>
+          <li>
+            <img src="Pictures/building.jpg" />
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="products.html" onmouseover="hoverNavFunc()"> Products </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html" onmouseover="hoverNavFunc()"> Contact </a>
+          <li>
+            <img src="Pictures/green-bottles.jpg" />
           </li>
         </ul>
+        <button class="prev">prev</button>
+        <button class="next">next</button>
       </div>
-    </div>
-    <div class="slider">
-      <ul>
-        <li>
-          <img src="Pictures/thermometer.jpg" />
-        </li>
-        <li>
-          <img src="Pictures/building.jpg" />
-        </li>
-        <li>
-          <img src="Pictures/green-bottles.jpg" />
-        </li>
-      </ul>
-      <button class="prev">prev</button>
-      <button class="next">next</button>
-    </div>
-    <div class="main-page">
-      <div class="col-1">
-        <div class="article">
-          <h2>Introduction to showy</h2>
-          <p class="article-body">
-            A company’s homepage is often the first point of contact a consumer has with a company, and as such, is the single most important page on most websites. Users think of the homepage as the hotel lobby: They don’t want to linger there, they want to go to the bar, the restaurant or find their room. As a jumping off point, a company's homepage should be well designed, easy to navigate and packed with informative content that leads the “guest” deeper into the site.
-          </p>
-          <p>
-            The content on your homepage is also vital because it can greatly improve search engine placement. Why? Because the homepage is where the search engine spiders land first; they crawl this page and start to gather data on what search terms are relevant to your website. Keyword strategy should go hand in hand with the selection of content to feature on your homepage. 
-          </p>
-          <a href="#" class="btn btn-primary" onmouseover="hoverFunc()">Read more</a>
-          <a href="#" class="btn btn-secondary" onmouseover="hoverFunc()">Comments</a>
+      <div class="main-page">
+        <div class="col-1">
+          <div class="article">
+            <h2>Introduction to showy</h2>
+            <p class="article-body">
+              A company’s homepage is often the first point of contact a consumer has with a company, and as such, is the single most important page on most websites. Users think of the homepage as the hotel lobby: They don’t want to linger there, they want to go to the bar, the restaurant or find their room. As a jumping off point, a company's homepage should be well designed, easy to navigate and packed with informative content that leads the “guest” deeper into the site.
+            </p>
+            <p>
+              The content on your homepage is also vital because it can greatly improve search engine placement. Why? Because the homepage is where the search engine spiders land first; they crawl this page and start to gather data on what search terms are relevant to your website. Keyword strategy should go hand in hand with the selection of content to feature on your homepage. 
+            </p>
+            <a href="#" class="btn btn-primary" onmouseover="hoverFunc()">Read more</a>
+            <a href="#" class="btn btn-secondary" onmouseover="hoverFunc()">Comments</a>
+          </div>
+          <div class="article">
+            <h2>Introduction to template</h2>
+            <p class="article-body">
+              A company’s homepage is often the first point of contact a consumer has with a company, and as such, is the single most important page on most websites. Users think of the homepage as the hotel lobby: They don’t want to linger there, they want to go to the bar, the restaurant or find their room. As a jumping off point, a company's homepage should be well designed, easy to navigate and packed with informative content that leads the “guest” deeper into the site.
+            </p>
+            <p>
+              The content on your homepage is also vital because it can greatly improve search engine placement. Why? Because the homepage is where the search engine spiders land first; they crawl this page and start to gather data on what search terms are relevant to your website. Keyword strategy should go hand in hand with the selection of content to feature on your homepage. 
+            </p>
+            <a href="#" class="btn btn-primary" onmouseover="hoverFunc()">Read more</a>
+            <a href="#" class="btn btn-secondary" onmouseover="hoverFunc()">Comments</a>
+          </div>
+          <div class="pagination">
+            <a href="#" onmouseover="hoverPageFunc()">&laquo;</a>
+            <a href="#" onmouseover="hoverPageFunc()">1</a>
+            <a class="active" href="#" onmouseover="hoverPageActiveFunc()">2</a>
+            <a href="#" onmouseover="hoverPageFunc()">3</a>
+            <a href="#" onmouseover="hoverPageFunc()">&raquo;</a>
+          </div>
         </div>
-        <div class="article">
-          <h2>Introduction to template</h2>
-          <p class="article-body">
-            A company’s homepage is often the first point of contact a consumer has with a company, and as such, is the single most important page on most websites. Users think of the homepage as the hotel lobby: They don’t want to linger there, they want to go to the bar, the restaurant or find their room. As a jumping off point, a company's homepage should be well designed, easy to navigate and packed with informative content that leads the “guest” deeper into the site.
-          </p>
-          <p>
-            The content on your homepage is also vital because it can greatly improve search engine placement. Why? Because the homepage is where the search engine spiders land first; they crawl this page and start to gather data on what search terms are relevant to your website. Keyword strategy should go hand in hand with the selection of content to feature on your homepage. 
-          </p>
-          <a href="#" class="btn btn-primary" onmouseover="hoverFunc()">Read more</a>
-          <a href="#" class="btn btn-secondary" onmouseover="hoverFunc()">Comments</a>
-        </div>
-        <div class="pagination">
-          <a href="#" onmouseover="hoverPageFunc()">&laquo;</a>
-          <a href="#" onmouseover="hoverPageFunc()">1</a>
-          <a class="active" href="#" onmouseover="hoverPageActiveFunc()">2</a>
-          <a href="#" onmouseover="hoverPageFunc()">3</a>
-          <a href="#" onmouseover="hoverPageFunc()">&raquo;</a>
-        </div>
-      </div>
-      <div class="col-2">
-        <div class="sidebar">
-          <div class="sidebar-box">
-            <h4>Categories</h4>
-            <div class="listing">
-              <h3>Listings</h3><br>
+        <div class="col-2">
+          <div class="sidebar">
+            <div class="sidebar-box">
+              <h4>Categories</h4>
+              <div class="listing">
+                <h3>Listings</h3><br>
+                <ul>
+                  <li>Listing item or service 1</li>
+                  <li>Listing item or service 2</li>
+                  <li>Listing item or service 3</li>
+                  <li>Listing item or service 4</li>
+                  <li>Listing item or service 5</li>
+                </ul>
+              </div>
+            </div>
+            <div class="sidebar-box-about">
+              <h3>Current Newsfeed</h3><br>
+              <p>
+                Seems obvious, but how many times have you watched a TV ad and after it was over, you have absolutely no idea what is was advertising? Cool looking websites are great, but if visitors can’t understand who you are and what you do in a matter of seconds, you’ll lose them. Start the page with a tagline that summarizes what the site or company does.
+              </p>
+            </div>
+            <div class="sidebar-box-help-links">
+              <h3>Helpful Links</h3><br>
               <ul>
-                <li>Listing item or service 1</li>
-                <li>Listing item or service 2</li>
-                <li>Listing item or service 3</li>
-                <li>Listing item or service 4</li>
-                <li>Listing item or service 5</li>
+                <li><a href="www.facebook.com" onmouseover="hoverLinkFunc()">Going to facebook</a></li>
+                <li><a href="www.yahoo.co.in" onmouseover="hoverLinkFunc()">Google players</a></li>
+                <li><a href="www.google.com" onmouseover="hoverLinkFunc()">W3 schools learn</a></li>
               </ul>
             </div>
           </div>
-          <div class="sidebar-box-about">
-            <h3>Current Newsfeed</h3><br>
-            <p>
-              Seems obvious, but how many times have you watched a TV ad and after it was over, you have absolutely no idea what is was advertising? Cool looking websites are great, but if visitors can’t understand who you are and what you do in a matter of seconds, you’ll lose them. Start the page with a tagline that summarizes what the site or company does.
-            </p>
+        </div>
+      </div>
+    </div>
+  </div> <!-- end of index mainpage -->
+
+  <div id="wrapper-about">
+    <div class="content">
+      <div class="nav-bar">
+        <div class="container">
+          <ul class="nav-bar-nav">
+            <li class="nav-item">
+              <a class="nav-link" onclick="index_home()" onmouseover="hoverNavFunc()"> Home </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" onclick="index_about()" onmouseover="hoverNavActiveFunc()"> About Us <span class="sr-only">(Current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="index_products()" onmouseover="hoverNavFunc()"> Products </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="index_contact()" onmouseover="hoverNavFunc()"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="heading">
+        <h1>WHO WE ARE:</h1>
+      </div>
+      <div class="frame">
+        <div class="col-1">
+          <p>
+            WebpageFX is a full-service digital marketing agency, and we create custom strategies for each of our clients based on their needs and goals.
+          </p>
+          <p>
+            255k page 1 rankings
+            Our team of is made up of award-winning marketers, designers, and developers, and we know what it takes to get real results online. We also keep the focus on the metrics that mean the most, like leads and revenue generated. We know that hitting these goals is what moves businesses forward, and we believe that our clients' success is the best measure of our own performance.
+          </p>
+          <p>
+            Through our years of experience, we've also learned that while each channel has its own set of advantages, they all work best when strategically paired with other channels. That's why offer full-service strategies to each of our clients, and use a combination of digital channels to increase visibility, conversions, and revenue.
+          </p>
+          <p>
+            As a result, we've driven over $700 million in sales and over 3 million leads for our clients. We've also built the most connected media team in the industry, with over 40 in-house influencers dedicated to building relationships and earning publication on prominent websites.
+          </p>
+        </div>
+        <div class="col-2">
+          <img id="myImage" src="Pictures/about.jpg" onclick="changeImg()">
+        </div>
+      </div>
+    </div>
+  </div> <!-- end of about page -->
+
+  <div id="wrapper-products">
+    <div class="content">
+      <div class="nav-bar">
+        <div class="container">
+          <ul class="nav-bar-nav">
+            <li class="nav-item">
+              <a class="nav-link" onclick="index_home()" onmouseover="hoverNavFunc()"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="index_about()" onmouseover="hoverNavFunc()"> About Us </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" onclick="index_products()" onmouseover="hoverNavActiveFunc()"> Products <span class="sr-only">(Current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="index_contact()" onmouseover="hoverNavFunc()"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="heading">
+        <h1>OUR PRODUCTS AND SERVICES:</h1>
+      </div>
+      <div class="frame">
+        <div class="col-1">
+          <p>
+            Many businesses simply use “Products”, “Services”, or “Products/Services” to name this page. Some offer both products and services and therefore separate those out into two pages. While these are commonly used and easy-to-identify terms, there are still many others that might work for your business. Other ideas for product page names include:
+          </p>
+          <p>
+            What We Offer:
+          </p>
+          <ul>
+            <li>Solutions</li>
+            <li>Options</li>
+            <li>Packages and Pricing</li>
+            <li>What We Do</li>
+            <li>Naming Your Products/Services</li>
+          </ul>
+          <p>
+            Having creative names for your products and services can be a way to reflect your business’s personality and style. Catchy names help your business to stand out and can even turn casual browsers into interested buyers. On the other hand, your product page is no place to sacrifice clarity for creativity.
+          </p>
+        </div>
+        <div class="col-2">
+          <img src="Pictures/product.jpeg">
+        </div>
+      </div>
+    </div>
+  </div> <!-- end of products page -->
+
+  <div id="wrapper-contact">
+    <div class="content">
+      <div class="nav-bar">
+        <div class="container">
+          <ul class="nav-bar-nav">
+            <li class="nav-item">
+              <a class="nav-link" onclick="index_home()" onmouseover="hoverNavFunc()"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="index_about()" onmouseover="hoverNavFunc()"> About Us </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="index_products()" onmouseover="hoverNavFunc()"> Products </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" onclick="index_contact()" onmouseover="hoverNavActiveFunc()"> Contact <span class="sr-only">(Current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="heading">
+        <h1>CONTACT US:</h1>
+      </div>
+      <div class="frame">
+        <div class="col-1">       
+          <h3>MyCompany</h3>
+          <form>
+            <label class="add-label-1">Address:</label>       
+            <label class="add-label-2">2/4, New Colony, Beach Vihar, India</label>
+          </form>
+          <form>
+            <label class="phn-label-1">Phone number:</label>
+            <label class="phn-label-2">+91 - 8874536282</label>
+          </form>
+          <form>
+            <label class="fax-label-1">Fax:</label>
+            <label class="fax-label-2">+1-212-9876543</label>
+          </form>
+          <button class="subscribe-btn" id="clickOn" onmouseover="modalShow()">Subscribe Now!</button>
+          <div id="modalContainer" class="modal">
+            <div id="simpleModal" class="modal2">
+              <span class="close-btn" id="closeButton" onmouseover="modalHide()">&times;</span>
+              <form>
+                <h4><b>Subscribe to our newsletter</b></h4>
+                <label class="name">Your Name </label>
+                <input class="text-box-1" id="myName" type="text" name="full_name" placeholder="Full Name"><br><br>
+                <label class="mail">Your Email ID </label>
+                <input class="mail-box-1" id="myMail" type="email" name="email_id" placeholder="Mail ID"><br><br>
+                <button class="subscribe-button" type="button" name="submit" onclick="displayInfo(full_name.value, email_id.value)">SUBSCRIBE</button>
+              </form>
+            </div>
           </div>
-          <div class="sidebar-box-help-links">
-            <h3>Helpful Links</h3><br>
-            <ul>
-              <li><a href="www.facebook.com" onmouseover="hoverLinkFunc()">Going to facebook</a></li>
-              <li><a href="www.yahoo.co.in" onmouseover="hoverLinkFunc()">Google players</a></li>
-              <li><a href="www.google.com" onmouseover="hoverLinkFunc()">W3 schools learn</a></li>
-            </ul>
+          <div id="newSec" class="newSection"></div>
+        </div>
+        <div class="col-2">
+          <div id="map" style="width:auto;height:400px;background:yellow"></div>
+            <script type="text/javascript">myMap()</script>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div> <!-- end of contact page -->
 
   <footer class="footer">
     <div class="footer-lists">
@@ -199,5 +366,6 @@
       <h4>Copyright</h4>
     </div>
   </footer>
+
 </body>
 </html>
