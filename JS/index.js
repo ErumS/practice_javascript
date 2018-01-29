@@ -76,29 +76,29 @@ function hoverPageFunc()
 
 //Web 3.0
 function index_home(){
-  $('#wrapper-about').css('display', 'none');
-  $('#wrapper-products').css('display', 'none');
-  $('#wrapper-contact').css('display', 'none');
-  $('#wrapper').css('display', 'block');
+  $('#wrapper-about').hide();
+  $('#wrapper-products').hide();
+  $('#wrapper-contact').hide();
+  $('#wrapper').show();
 }
 
 function index_about(){
-  $('#wrapper').css('display', 'none');
-  $('#wrapper-products').css('display', 'none');
-  $('#wrapper-contact').css('display', 'none');
-  $('#wrapper-about').css('display', 'block');
+  $('#wrapper').hide();
+  $('#wrapper-products').hide();
+  $('#wrapper-contact').hide();
+  $('#wrapper-about').show();
 }
 
 function index_products(){
-  $('#wrapper').css('display', 'none');
-  $('#wrapper-about').css('display', 'none');
-  $('#wrapper-contact').css('display', 'none');
-  $('#wrapper-products').css('display', 'block');
+  $('#wrapper').hide();
+  $('#wrapper-about').hide();
+  $('#wrapper-contact').hide();
+  $('#wrapper-products').show();
 }
 
 function index_contact(){
-  $('#wrapper').css('display', 'none');
-  $('#wrapper-products').css('display', 'none');
-  $('#wrapper-about').css('display', 'none');
-  $('#wrapper-contact').css('display', 'block');
+  $('#wrapper').hide();
+  $('#wrapper-products').hide();
+  $('#wrapper-about').hide();
+  $('#wrapper-contact').show();
 }
