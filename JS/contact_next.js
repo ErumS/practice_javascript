@@ -1,31 +1,46 @@
-function modalShow(){
-  $('#clickOn').click(function(){
-    $('#modalContainer').css('display', 'block');
-  });
+var WS = WS || {};
+
+WS.ContactNext = function() {
+  this.initialize();
 }
 
-function modalHide()
-{
-  $('#closeButton').click(function(){
-    $('#modalContainer').css('display', 'none');
-  });
-}
+WS.ContactNext.prototype = {
+  initialize:function() {
+    this.modalShow();
+    this.modalHide();
+    this.displayInfo();
+  },
 
-function displayInfo(name1, mail1)
-{
-  if (typeof(Storage) !== "undefined") 
+  modalShow:function(){
+    $('#wrapper-contact .col-1 #clickOn').click(function(){
+      $('#wrapper-contact .col-1 #modalContainer').css('display', 'block');
+    });
+  },
+
+  modalHide:function()
   {
-    sessionStorage.setItem("name", name1);
-    sessionStorage.setItem("mail", mail1);
-    subscriberName = document.getElementById("myName").innerHTML = sessionStorage.getItem("name");
-    subscriberMail = document.getElementById("myMail").innerHTML = sessionStorage.getItem("mail");
-    var row = "You have successfully subscribed with name as " + subscriberName + " and email id as " + subscriberMail;
-    $('#newSec').show();
-    $('#newSec').append(row + '<br>');
-    $('#modalContainer').css('display', 'none');
-  } 
-  else 
+    $('#wrapper-contact .col-1 #closeButton').click(function(){
+      $('#wrapper-contact .col-1 #modalContainer').css('display', 'none');
+    });
+  },
+
+  displayInfo:function()
   {
-    document.getElementById("myName").innerHTML = "Sorry, your browser does not support Web Storage...";
+    $('#simpleModal .subscribe-button').click(function(){
+      if (typeof(Storage) !== "undefined") 
+      {
+        subscriberName = document.getElementById("myName").value;
+        subscriberMail = document.getElementById("myMail").value;
+        var row = "You have successfully subscribed with name as " + subscriberName + " and email id as " + subscriberMail;
+        $('#wrapper-contact .col-1 #newSec').show();
+        $('#wrapper-contact .col-1 #newSec').append(row + '<br>');
+        $('#wrapper-contact .col-1 #modalContainer').css('display', 'none');
+        document.getElementById("myForm").reset();
+      } 
+      else 
+      {
+        document.getElementById("myName").innerHTML = "Sorry, your browser does not support Web Storage...";
+      }
+    });
   }
 }

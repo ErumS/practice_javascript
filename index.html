@@ -6,9 +6,9 @@
   <link rel="stylesheet" type="text/css" href="CSS/common.css">
   <link rel="stylesheet" type="text/css" href="CSS/about.css">
   <link rel="stylesheet" type="text/css" href="CSS/contact.css">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtRgAO14FHU3Wn_NtKsWNp85jtjq8b-BA&callback=myMap"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtRgAO14FHU3Wn_NtKsWNp85jtjq8b-BA&callback=myMap"></script>
   <script type="text/javascript" src="JS/index.js"></script>
   <script type="text/javascript" src="JS/common.js"></script>
   <script src="JS/contact.js"></script>
@@ -56,16 +56,16 @@
         <div class="container">
           <ul class="nav-bar-nav">
             <li class="nav-item active">
-              <a class="nav-link" onclick="index_home()" onmouseover="hoverNavActiveFunc()"> Home <span class="sr-only">(Current)</span></a>
+              <a class="nav-link homeLink"> Home <span class="sr-only">(Current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="index_about()" onmouseover="hoverNavFunc()"> About Us </a>
+              <a class="nav-link passive aboutLink"> About Us </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="index_products()" onmouseover="hoverNavFunc()"> Products </a>
+              <a class="nav-link passive productsLink"> Products </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="index_contact()" onmouseover="hoverNavFunc()"> Contact </a>
+              <a class="nav-link passive contactLink"> Contact </a>
             </li>
           </ul>
         </div>
@@ -95,10 +95,10 @@
             <p>
               The content on your homepage is also vital because it can greatly improve search engine placement. Why? Because the homepage is where the search engine spiders land first; they crawl this page and start to gather data on what search terms are relevant to your website. Keyword strategy should go hand in hand with the selection of content to feature on your homepage. 
             </p>
-            <a href="#" class="btn btn-primary" onmouseover="hoverFunc()">Read more</a>
-            <a href="#" class="btn btn-secondary" onmouseover="hoverFunc()">Comments</a>
+            <a href="#" class="btn btn-primary">Read more</a>
+            <a href="#" class="btn btn-secondary">Comments</a>
           </div>
-          <div class="article animation-element">
+          <div class="article">
             <h2>Introduction to template</h2>
             <p class="article-body">
               A company’s homepage is often the first point of contact a consumer has with a company, and as such, is the single most important page on most websites. Users think of the homepage as the hotel lobby: They don’t want to linger there, they want to go to the bar, the restaurant or find their room. As a jumping off point, a company's homepage should be well designed, easy to navigate and packed with informative content that leads the “guest” deeper into the site.
@@ -106,15 +106,15 @@
             <p>
               The content on your homepage is also vital because it can greatly improve search engine placement. Why? Because the homepage is where the search engine spiders land first; they crawl this page and start to gather data on what search terms are relevant to your website. Keyword strategy should go hand in hand with the selection of content to feature on your homepage. 
             </p>
-            <a href="#" class="btn btn-primary" onmouseover="hoverFunc()">Read more</a>
-            <a href="#" class="btn btn-secondary" onmouseover="hoverFunc()">Comments</a>
+            <a href="#" class="btn btn-primary">Read more</a>
+            <a href="#" class="btn btn-secondary">Comments</a>
           </div>
           <div class="pagination">
-            <a href="#" onmouseover="hoverPageFunc()">&laquo;</a>
-            <a href="#" onmouseover="hoverPageFunc()">1</a>
-            <a class="active" href="#" onmouseover="hoverPageActiveFunc()">2</a>
-            <a href="#" onmouseover="hoverPageFunc()">3</a>
-            <a href="#" onmouseover="hoverPageFunc()">&raquo;</a>
+            <a class="passive" href="#">&laquo;</a>
+            <a class="passive" href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a class="passive" href="#">3</a>
+            <a class="passive" href="#">&raquo;</a>
           </div>
         </div>
         <div class="col-2">
@@ -141,13 +141,13 @@
             <div class="sidebar-box-help-links">
               <h3>Helpful Links</h3><br>
               <ul>
-                <li><a href="www.facebook.com" onmouseover="hoverLinkFunc()">Going to facebook</a></li>
-                <li><a href="www.yahoo.co.in" onmouseover="hoverLinkFunc()">Google players</a></li>
-                <li><a href="www.google.com" onmouseover="hoverLinkFunc()">W3 schools learn</a></li>
+                <li><a href="www.facebook.com">Going to facebook</a></li>
+                <li><a href="www.yahoo.co.in">Google players</a></li>
+                <li><a href="www.google.com">W3 schools learn</a></li>
               </ul>
             </div>
             <div class="light-bulb">
-              <img id="myImage" onclick="changeImage()" src="Pictures/bulb_off.jpg" width="180" height="180">
+              <img id="myImage" src="Pictures/bulb_off.jpg" width="180" height="180">
               <p>Click the light bulb to turn on/off the light.</p>
             </div>
           </div>
@@ -162,16 +162,16 @@
         <div class="container">
           <ul class="nav-bar-nav">
             <li class="nav-item">
-              <a class="nav-link" onclick="index_home()" onmouseover="hoverNavFunc()"> Home </a>
+              <a class="nav-link passive homeLink"> Home </a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" onclick="index_about()" onmouseover="hoverNavActiveFunc()"> About Us <span class="sr-only">(Current)</span></a>
+              <a class="nav-link aboutLink"> About Us <span class="sr-only">(Current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="index_products()" onmouseover="hoverNavFunc()"> Products </a>
+              <a class="nav-link passive productsLink"> Products </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="index_contact()" onmouseover="hoverNavFunc()"> Contact </a>
+              <a class="nav-link passive contactLink"> Contact </a>
             </li>
           </ul>
         </div>
@@ -196,7 +196,7 @@
           </p>
         </div>
         <div class="col-2">
-          <img id="myImage" src="Pictures/about.jpg" onclick="changeImg()">
+          <img id="myImage" src="Pictures/about.jpg">
         </div>
       </div>
     </div>
@@ -208,16 +208,16 @@
         <div class="container">
           <ul class="nav-bar-nav">
             <li class="nav-item">
-              <a class="nav-link" onclick="index_home()" onmouseover="hoverNavFunc()"> Home </a>
+              <a class="nav-link passive homeLink"> Home </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="index_about()" onmouseover="hoverNavFunc()"> About Us </a>
+              <a class="nav-link passive aboutLink"> About Us </a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" onclick="index_products()" onmouseover="hoverNavActiveFunc()"> Products <span class="sr-only">(Current)</span></a>
+              <a class="nav-link productsLink"> Products <span class="sr-only">(Current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="index_contact()" onmouseover="hoverNavFunc()"> Contact </a>
+              <a class="nav-link passive contactLink"> Contact </a>
             </li>
           </ul>
         </div>
@@ -257,16 +257,16 @@
         <div class="container">
           <ul class="nav-bar-nav">
             <li class="nav-item">
-              <a class="nav-link" onclick="index_home()" onmouseover="hoverNavFunc()"> Home </a>
+              <a class="nav-link passive homeLink"> Home </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="index_about()" onmouseover="hoverNavFunc()"> About Us </a>
+              <a class="nav-link passive aboutLink"> About Us </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="index_products()" onmouseover="hoverNavFunc()"> Products </a>
+              <a class="nav-link passive productsLink"> Products </a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" onclick="index_contact()" onmouseover="hoverNavActiveFunc()"> Contact <span class="sr-only">(Current)</span></a>
+              <a class="nav-link contactLink"> Contact <span class="sr-only">(Current)</span></a>
             </li>
           </ul>
         </div>
@@ -289,17 +289,17 @@
             <label class="fax-label-1">Fax:</label>
             <label class="fax-label-2">+1-212-9876543</label>
           </form>
-          <button class="subscribe-btn" id="clickOn" onmouseover="modalShow()">Subscribe Now!</button>
+          <button class="subscribe-btn" id="clickOn">Subscribe Now!</button>
           <div id="modalContainer" class="modal">
             <div id="simpleModal" class="modal2">
-              <span class="close-btn" id="closeButton" onmouseover="modalHide()">&times;</span>
-              <form>
+              <span class="close-btn" id="closeButton">&times;</span>
+              <form id="myForm">
                 <h4><b>Subscribe to our newsletter</b></h4>
                 <label class="name">Your Name </label>
                 <input class="text-box-1" id="myName" type="text" name="full_name" placeholder="Full Name"><br><br>
                 <label class="mail">Your Email ID </label>
                 <input class="mail-box-1" id="myMail" type="email" name="email_id" placeholder="Mail ID"><br><br>
-                <button class="subscribe-button" type="button" name="submit" onclick="displayInfo(full_name.value, email_id.value)">SUBSCRIBE</button>
+                <button class="subscribe-button" type="button" name="submit">SUBSCRIBE</button>
               </form>
             </div>
           </div>
@@ -307,7 +307,6 @@
         </div>
         <div class="col-2">
           <div id="map" style="width:auto;height:400px;background:yellow"></div>
-            <script type="text/javascript">myMap()</script>
           </div>
         </div>
       </div>
@@ -367,6 +366,25 @@
       <h4>Copyright</h4>
     </div>
   </footer>
-
 </body>
 </html>
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+    var indexing = new WS.Indexing();
+  });
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+    var common = new WS.Common();
+  });
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+    var contactFirst = new WS.ContactFirst();
+  });
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+    var contactNext = new WS.ContactNext();
+  });
+</script>
