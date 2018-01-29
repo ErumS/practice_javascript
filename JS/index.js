@@ -3,6 +3,7 @@ $(function() {
   $('#wrapper-products').hide();
   $('#wrapper-contact').hide();
   $('#newSec').hide();
+
   delay:17
   duration: 3000
   var ul = $(".slider ul");
@@ -74,6 +75,14 @@ function hoverPageFunc()
   });
 }
 
+function changeImage() {
+  var image = document.getElementById('myImage');
+  if (image.src.match("bulb_on")) 
+    image.src = "Pictures/bulb_off.jpg";
+  else 
+    image.src = "Pictures/bulb_on.jpeg";
+}
+
 //Web 3.0
 function index_home(){
   $('#wrapper-about').hide();
@@ -102,3 +111,19 @@ function index_contact(){
   $('#wrapper-about').hide();
   $('#wrapper-contact').show();
 }
+
+// $(window).on(“load”,function() {
+//   $(window).scroll(function() {
+//     var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+//     $(“.fade-animation”).each(function() {
+
+//       var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+//       if (objectBottom < windowBottom) {
+//         if ($(this).css(“opacity”)==0) {$(this).fadeTo(500,1);}
+//       } else {
+//         if ($(this).css(“opacity”)==1) {$(this).fadeTo(500,0);}
+//       }
+//     });
+//   }).scroll();
+// });

@@ -11,7 +11,6 @@
   <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="JS/index.js"></script>
   <script type="text/javascript" src="JS/common.js"></script>
-  <script type="text/javascript" src="JS/about.js"></script>
   <script src="JS/contact.js"></script>
   <script src="JS/contact_next.js"></script>
 </head>
@@ -99,7 +98,7 @@
             <a href="#" class="btn btn-primary" onmouseover="hoverFunc()">Read more</a>
             <a href="#" class="btn btn-secondary" onmouseover="hoverFunc()">Comments</a>
           </div>
-          <div class="article">
+          <div class="article animation-element">
             <h2>Introduction to template</h2>
             <p class="article-body">
               A company’s homepage is often the first point of contact a consumer has with a company, and as such, is the single most important page on most websites. Users think of the homepage as the hotel lobby: They don’t want to linger there, they want to go to the bar, the restaurant or find their room. As a jumping off point, a company's homepage should be well designed, easy to navigate and packed with informative content that leads the “guest” deeper into the site.
@@ -146,6 +145,10 @@
                 <li><a href="www.yahoo.co.in" onmouseover="hoverLinkFunc()">Google players</a></li>
                 <li><a href="www.google.com" onmouseover="hoverLinkFunc()">W3 schools learn</a></li>
               </ul>
+            </div>
+            <div class="light-bulb">
+              <img id="myImage" onclick="changeImage()" src="Pictures/bulb_off.jpg" width="180" height="180">
+              <p>Click the light bulb to turn on/off the light.</p>
             </div>
           </div>
         </div>
@@ -314,51 +317,49 @@
   <footer class="footer">
     <div class="footer-lists">
       <div class="container">
-        <div class="row">
-          <div class="col">
-            <h3>Rails Column 1</h3>
-            <ul>
-              <li>Something one</li>
-              <li>Something two</li>
-              <li>Something three</li>
-              <li>Something four</li>
-              <li>Something five</li>
-              <li>Something six</li>
-            </ul>
-          </div>
-          <div class="col">
-            <h3>Rails Column 2</h3>
-            <ul>
-              <li>Something one</li>
-              <li>Something two</li>
-              <li>Something three</li>
-              <li>Something four</li>
-              <li>Something five</li>
-              <li>Something six</li>
-            </ul>
-          </div>
-          <div class="col">
-            <h3>Rails Column 3</h3>
-            <ul>
-              <li>Something one</li>
-              <li>Something two</li>
-              <li>Something three</li>
-              <li>Something four</li>
-              <li>Something five</li>
-              <li>Something six</li>
-            </ul>
-          </div>
-          <div class="col">
-            <h3>Rails column 4</h3>
-            <ul>
-              <li>Something one</li>
-              <li>Something two</li>
-              <li>Something three</li>
-              <li>Something four</li>
-              <li>Something five</li>
-              <li>Something six</li>
-            </ul>
-          </div>
+        <div class="col">
+          <h3>Rails Column 1</h3>
+          <ul>
+            <li>Something one</li>
+            <li>Something two</li>
+            <li>Something three</li>
+            <li>Something four</li>
+            <li>Something five</li>
+            <li>Something six</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Rails Column 2</h3>
+          <ul>
+            <li>Something one</li>
+            <li>Something two</li>
+            <li>Something three</li>
+            <li>Something four</li>
+            <li>Something five</li>
+            <li>Something six</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Rails Column 3</h3>
+          <ul>
+            <li>Something one</li>
+            <li>Something two</li>
+            <li>Something three</li>
+            <li>Something four</li>
+            <li>Something five</li>
+            <li>Something six</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Rails column 4</h3>
+          <ul>
+            <li>Something one</li>
+            <li>Something two</li>
+            <li>Something three</li>
+            <li>Something four</li>
+            <li>Something five</li>
+            <li>Something six</li>
+          </ul>
         </div>
       </div>
     </div>

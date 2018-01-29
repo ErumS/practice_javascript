@@ -21,7 +21,7 @@ function displayInfo(name1, mail1)
     subscriberMail = document.getElementById("myMail").innerHTML = sessionStorage.getItem("mail");
     var row = "You have successfully subscribed with name as " + subscriberName + " and email id as " + subscriberMail;
     $('#newSec').show();
-    $('.newSection').append(row + '<br>');
+    $('#newSec').append(row + '<br>');
     $('#modalContainer').css('display', 'none');
   } 
   else 
