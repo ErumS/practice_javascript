@@ -7,6 +7,7 @@ WS.Indexing = function() {
 WS.Indexing.prototype = {
   initialize:function() {
     this.sliding();
+    this.anime();
     this.hoverFunc();
     this.hoverLinkFunc();
     this.hoverPageActiveFunc();
@@ -20,6 +21,22 @@ WS.Indexing.prototype = {
     $('#wrapper-products').hide();
     $('#wrapper-contact').hide();
     $('#newSec').hide();
+  },
+
+  anime:function(){
+    $(window).scroll(function() {
+      var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+      $('.main-page .animation-element').each(function() {
+
+        var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+        if (objectBottom < windowBottom) {
+          if ($(this).css("opacity")==0) {$(this).fadeTo(150,1);}
+        } else {
+          if ($(this).css("opacity")==1) {$(this).fadeTo(150,0);}
+        }
+      });
+    }).scroll(); 
   },
 
   sliding:function(){
@@ -58,41 +75,37 @@ WS.Indexing.prototype = {
     }
   },
 
-    hoverFunc:function()
-    {
-      $(".article .btn").hover(function(){
-        $(this).css("color", "maroon");
-        }, function(){
-        $(this).css("color", "white");
-      });
-    },
+  hoverFunc:function(){
+    $(".article .btn").hover(function(){
+      $(this).css("color", "maroon");
+      }, function(){
+      $(this).css("color", "white");
+    });
+  },
 
-    hoverLinkFunc:function()
-    {
-      $(".sidebar .sidebar-box-help-links a").hover(function(){
-        $(this).css("color", "blue");
-        }, function(){
-        $(this).css("color", "red");
-      });
-    },
+  hoverLinkFunc:function(){
+    $(".sidebar .sidebar-box-help-links a").hover(function(){
+      $(this).css("color", "blue");
+      }, function(){
+      $(this).css("color", "red");
+    });
+  },
 
-    hoverPageActiveFunc:function()
-    {
-      $(".pagination .active").hover(function(){
-        $(this).css("background-color", "#df1010");
-        }, function(){
-        $(this).css("background-color", "#df1010");
-      });
-    },
+  hoverPageActiveFunc:function(){
+    $(".pagination .active").hover(function(){
+      $(this).css("background-color", "#df1010");
+      }, function(){
+      $(this).css("background-color", "#df1010");
+    });
+  },
 
-    hoverPageFunc:function()
-    {
-      $(".pagination .passive").hover(function(){
-        $(this).css("background-color", "#ddd");
-        }, function(){
-        $(this).css("background-color", "white");
-      });
-    },
+  hoverPageFunc:function(){
+    $(".pagination .passive").hover(function(){
+      $(this).css("background-color", "#ddd");
+      }, function(){
+      $(this).css("background-color", "white");
+    });
+  },
 
   changeImage:function(){
     $('.light-bulb #myImage').click(function(){
