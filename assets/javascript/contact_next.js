@@ -6,25 +6,25 @@ WS.ContactNext = function() {
 
 WS.ContactNext.prototype = {
   initialize:function() {
-    this.modalShow();
-    this.modalHide();
-    this.displayInfo();
+    this.handleModalShow();
+    this.handleModalHideOnCloseButtonClick();
+    this.displaySubscribedInfo();
   },
 
-  modalShow:function(){
+  handleModalShow:function(){
     $('#wrapper-contact .col-1 #clickOn').click(function(){
       $('#wrapper-contact .col-1 #modalContainer').css('display', 'block');
     });
   },
 
-  modalHide:function()
+  handleModalHideOnCloseButtonClick:function()
   {
     $('#wrapper-contact .col-1 #closeButton').click(function(){
       $('#wrapper-contact .col-1 #modalContainer').css('display', 'none');
     });
   },
 
-  displayInfo:function()
+  displaySubscribedInfo:function()
   {
     $('#simpleModal .subscribe-button').click(function(){
       if (typeof(Storage) !== "undefined") 

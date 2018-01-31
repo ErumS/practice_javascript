@@ -25,7 +25,7 @@
   }
 }
 
-@media (min-width: 150px) {
+@media (min-width: 480px) {
   .header .row .left-search {
     text-align: left !important;
     margin-top: 25px;
@@ -68,7 +68,7 @@
   border-radius: 0.25rem;
 }
 
-@media (min-width: 150px) {
+@media (min-width: 480px) {
   .btn-search {
     display: inline-block;
     font-weight: 400;
@@ -99,7 +99,7 @@
   font-weight: 500;
 }
 
-@media (min-width: 150px) {
+@media (min-width: 480px) {
   .right-links {
     text-align: right !important;
     margin-top: 25px;
@@ -112,14 +112,16 @@
   }
 }
 
-.right-links p {
-  margin-top: 0;
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
+@media (min-width: 480px) {
+  .right-links p {
+    margin-top: 0;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }
 
-@media (min-width: 150px) {
+@media (min-width: 480px) {
   .social-icons {
     margin-bottom: 0;
   }

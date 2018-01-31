@@ -6,30 +6,34 @@ WS.Indexing = function() {
 
 WS.Indexing.prototype = {
   initialize:function() {
-    this.sliding();
-    this.anime();
-    this.hoverFunc();
-    this.hoverLinkFunc();
-    this.hoverPageActiveFunc();
-    this.hoverPageFunc();
-    this.changeImage();
-    this.index_home();
-    this.index_about();
-    this.index_products();
-    this.index_contact();
+    this.handleAllHideContainers();
+    this.animationOnArticle();
+    this.sliderOnHomePage();
+    this.handleHoverOnButtons();
+    this.handleHoverOnSideLinks();
+    this.handleHoverOnActivePagination();
+    this.handleHoverOnPassivePagination();
+    this.handleHoverOnActiveNavLink();
+    this.handleHoverOnPassiveNavLink();
+    this.handleChangeBulbImageEvent();
+    this.linkToHomePage();
+    this.linkToAboutPage();
+    this.linkToProductsPage();
+    this.linkToContactPage();
+  },
+
+  handleAllHideContainers: function() {
     $('#wrapper-about').hide();
     $('#wrapper-products').hide();
     $('#wrapper-contact').hide();
     $('#newSec').hide();
   },
 
-  anime:function(){
+  animationOnArticle: function() {
     $(window).scroll(function() {
       var windowBottom = $(this).scrollTop() + $(this).innerHeight();
       $('.main-page .animation-element').each(function() {
-
         var objectBottom = $(this).offset().top + $(this).outerHeight();
-
         if (objectBottom < windowBottom) {
           if ($(this).css("opacity")==0) {$(this).fadeTo(150,1);}
         } else {
@@ -39,7 +43,7 @@ WS.Indexing.prototype = {
     }).scroll(); 
   },
 
-  sliding:function(){
+  sliderOnHomePage:function(){
     delay:17
     duration: 3000
     var ul = $(".slider ul");
@@ -75,7 +79,7 @@ WS.Indexing.prototype = {
     }
   },
 
-  hoverFunc:function(){
+  handleHoverOnButtons:function(){
     $(".article .btn").hover(function(){
       $(this).css("color", "maroon");
       }, function(){
@@ -83,7 +87,7 @@ WS.Indexing.prototype = {
     });
   },
 
-  hoverLinkFunc:function(){
+  handleHoverOnSideLinks:function(){
     $(".sidebar .sidebar-box-help-links a").hover(function(){
       $(this).css("color", "blue");
       }, function(){
@@ -91,7 +95,7 @@ WS.Indexing.prototype = {
     });
   },
 
-  hoverPageActiveFunc:function(){
+  handleHoverOnActivePagination:function(){
     $(".pagination .active").hover(function(){
       $(this).css("background-color", "#df1010");
       }, function(){
@@ -99,7 +103,7 @@ WS.Indexing.prototype = {
     });
   },
 
-  hoverPageFunc:function(){
+  handleHoverOnPassivePagination:function(){
     $(".pagination .passive").hover(function(){
       $(this).css("background-color", "#ddd");
       }, function(){
@@ -107,18 +111,36 @@ WS.Indexing.prototype = {
     });
   },
 
-  changeImage:function(){
+  handleHoverOnActiveNavLink:function()
+  {
+    $(".nav-bar .active").hover(function(){
+      $(this).css("color", "white");
+      }, function(){
+      $(this).css("color", "white");
+    });
+  },
+
+  handleHoverOnPassiveNavLink:function()
+  {
+    $(".nav-bar .passive").hover(function(){
+      $(this).css("color", "white");
+      }, function(){
+      $(this).css("color", "#999");
+    });
+  },
+
+  handleChangeBulbImageEvent:function(){
     $('.light-bulb #myImage').click(function(){
       var image = document.getElementById('myImage');
       if (image.src.match("bulb_on")) 
-        image.src = "Pictures/bulb_off.jpg";
+        image.src = "assets/images/bulb_off.jpg";
       else 
-        image.src = "Pictures/bulb_on.jpeg";
+        image.src = "assets/images/bulb_on.jpeg";
     });
   },
 
   //Web 3.0
-  index_home:function(){
+  linkToHomePage:function(){
     $('.nav-item .homeLink').click(function(){
       $('#wrapper-about').hide();
       $('#wrapper-products').hide();
@@ -127,7 +149,7 @@ WS.Indexing.prototype = {
     });
   },
 
-  index_about:function(){
+  linkToAboutPage:function(){
     $('.nav-item .aboutLink').click(function(){
       $('#wrapper').hide();
       $('#wrapper-products').hide();
@@ -136,7 +158,7 @@ WS.Indexing.prototype = {
     });
   },
 
-  index_products:function(){
+  linkToProductsPage:function(){
     $('.nav-item .productsLink').click(function(){
       $('#wrapper').hide();
       $('#wrapper-about').hide();
@@ -145,8 +167,10 @@ WS.Indexing.prototype = {
     });
   },
 
-  index_contact:function(){
+  linkToContactPage:function(){
     $('.nav-item .contactLink').click(function(){
+      var contactFirst = new WS.ContactFirst();
+      var contactNext = new WS.ContactNext();
       $('#wrapper').hide();
       $('#wrapper-products').hide();
       $('#wrapper-about').hide();
