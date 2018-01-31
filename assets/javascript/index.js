@@ -33,7 +33,7 @@ WS.Indexing.prototype = {
     $(window).scroll(function() {
       var windowBottom = $(this).scrollTop() + $(this).innerHeight();
       $('.main-page .animation-element').each(function() {
-        var objectBottom = $(this).offset().top + $(this).outerHeight();
+        var objectBottom = $(this).offset().top + $(this).outerHeight() - 300;
         if (objectBottom < windowBottom) {
           if ($(this).css("opacity")==0) {$(this).fadeTo(150,1);}
         } else {
