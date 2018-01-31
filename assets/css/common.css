@@ -260,7 +260,6 @@
     margin-left: auto;
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
   }
 }
 
@@ -269,13 +268,15 @@
     max-width: 100%;
     position: relative;
     width: 25%;
-    float:left;
     min-height: 1px;
+    text-align: center;
   }
 }
 
 .footer-lists ul {
   list-style: none;
+  text-align: center;
+  padding-left: inherit;
 }
 
 @media (min-width: 150px) {
