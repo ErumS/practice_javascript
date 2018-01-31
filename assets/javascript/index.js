@@ -169,8 +169,7 @@ WS.Indexing.prototype = {
 
   linkToContactPage:function(){
     $('.nav-item .contactLink').click(function(){
-      var contactFirst = new WS.ContactFirst();
-      var contactNext = new WS.ContactNext();
+      var contact = new WS.Contact();
       $('#wrapper').hide();
       $('#wrapper-products').hide();
       $('#wrapper-about').hide();
